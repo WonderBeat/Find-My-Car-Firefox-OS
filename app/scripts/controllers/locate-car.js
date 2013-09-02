@@ -1,6 +1,5 @@
 'use strict';
 
-angular.module('findMyCarApp')
-  .controller('LocateCarCtrl', function ($scope) {
+angular.module('findMyCarApp').controller('LocateCarCtrl', function () {
 
-  });
+});

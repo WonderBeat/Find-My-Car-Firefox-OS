@@ -29,14 +29,6 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: yeomanConfig,
     watch: {
-      coffee: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-        tasks: ['coffee:dist']
-      },
-      coffeeTest: {
-        files: ['test/spec/{,*/}*.coffee'],
-        tasks: ['coffee:test']
-      },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['copy:styles', 'autoprefixer']
@@ -128,30 +120,6 @@ module.exports = function (grunt) {
         '<%= yeoman.app %>/scripts/{,*/}*.js'
       ]
     },
-    coffee: {
-      options: {
-        sourceMap: true,
-        sourceRoot: ''
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/scripts',
-          src: '{,*/}*.coffee',
-          dest: '.tmp/scripts',
-          ext: '.js'
-        }]
-      },
-      test: {
-        files: [{
-          expand: true,
-          cwd: 'test/spec',
-          src: '{,*/}*.coffee',
-          dest: '.tmp/spec',
-          ext: '.js'
-        }]
-      }
-    },
     // not used since Uglify task does concat,
     // but still available if needed
     /*concat: {
@@ -203,38 +171,36 @@ module.exports = function (grunt) {
       }
     },
     cssmin: {
-      // By default, your `index.html` <!-- Usemin Block --> will take care of
-      // minification. This option is pre-configured if you do not wish to use
-      // Usemin blocks.
-      // dist: {
-      //   files: {
-      //     '<%= yeoman.dist %>/styles/main.css': [
-      //       '.tmp/styles/{,*/}*.css',
-      //       '<%= yeoman.app %>/styles/{,*/}*.css'
-      //     ]
-      //   }
-      // }
+	    dist: {
+		    files: {
+			    '<%= yeoman.dist %>/styles/main.css': [
+				    '.tmp/styles/{,*/}*.css',
+				    '<%= yeoman.app %>/styles/{,*/}*.css'
+			    ]
+		    }
+	    }
     },
     htmlmin: {
-      dist: {
-        options: {
-          /*removeCommentsFromCDATA: true,
-          // https://github.com/yeoman/grunt-usemin/issues/44
-          //collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          removeAttributeQuotes: true,
-          removeRedundantAttributes: true,
-          useShortDoctype: true,
-          removeEmptyAttributes: true,
-          removeOptionalTags: true*/
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>',
-          src: ['*.html', 'views/*.html'],
-          dest: '<%= yeoman.dist %>'
-        }]
-      }
+	    dist: {
+		    options: {
+			    removeCommentsFromCDATA: true
+			    /*removeCommentsFromCDATA: true,
+			     // https://github.com/yeoman/grunt-usemin/issues/44
+			     //collapseWhitespace: true,
+			     collapseBooleanAttributes: true,
+			     removeAttributeQuotes: true,
+			     removeRedundantAttributes: true,
+			     useShortDoctype: true,
+			     removeEmptyAttributes: true,
+			     removeOptionalTags: true*/
+		    },
+		    files: [{
+			    expand: true,
+			    cwd: '<%= yeoman.app %>',
+			    src: ['*.html', 'views/*.html'],
+			    dest: '<%= yeoman.dist %>'
+		    }]
+	    }
     },
     // Put files not handled in other tasks here
     copy: {
@@ -246,8 +212,6 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>',
           src: [
             '*.{ico,png,txt}',
-            '.htaccess',
-            'bower_components/**/*',
             'images/{,*/}*.{gif,webp}',
             'styles/fonts/*'
           ]
@@ -269,15 +233,12 @@ module.exports = function (grunt) {
     },
     concurrent: {
       server: [
-        'coffee:dist',
         'copy:styles'
       ],
       test: [
-        'coffee',
         'copy:styles'
       ],
       dist: [
-        'coffee',
         'copy:styles',
         'imagemin',
         'svgmin',
@@ -293,11 +254,6 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: false,
         watch: true
-      }
-    },
-    cdnify: {
-      dist: {
-        html: ['<%= yeoman.dist %>/*.html']
       }
     },
     ngmin: {
@@ -349,11 +305,10 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
-    'concat',
-    'copy:dist',
-    'cdnify',
+	  'cssmin',
+	  'concat',
+	  'copy:dist',
     'ngmin',
-    'cssmin',
     'uglify',
     'rev',
     'usemin'
