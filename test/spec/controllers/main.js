@@ -2,6 +2,8 @@
 
 describe('Controller: MainCtrl', function () {
 
+	beforeEach(module('LocalStorageModule'));
+
   beforeEach(module('findMyCarApp'));
 
   var MainCtrl,
