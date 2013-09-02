@@ -1,0 +1,22 @@
+{
+    "name": "Find My Car",
+    "version": "0.8.0",
+    "developer": {
+        "name": "Denis Golovachev",
+        "url": "http://borov.net"
+    },
+    "description": "Find My Car",
+    "launch_path": "/index.html",
+    "icons":{
+        "128": "/icons/icon128.png",
+        "60": "/icons/icon60.png",
+        "200": "/icons/icon200.png"
+    },
+    "locales": {
+        "en-US": {
+          "name": "Find My Car",
+          "description": "Find My Car"
+        }
+      },
+    "default_locale": "en-US"
+}
