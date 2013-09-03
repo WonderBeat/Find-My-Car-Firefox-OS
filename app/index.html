@@ -9,22 +9,28 @@
         <link rel="stylesheet" href="styles/gaia/buttons.css">
         <link rel="stylesheet" href="styles/gaia/headers.css">
         <link rel="stylesheet" href="styles/gaia/progress_activity.css">
+        <link rel="stylesheet" href="bower_components/brick/dist/tooltip/tooltip.min.css">
+        <link rel="stylesheet" href="bower_components/brick/dist/flipbox/flipbox.min.css">
 </head>
   <body data-ng-csp data-ng-app="findMyCarApp">
     <div class="container" data-ng-view=""></div>
 
-    <script src="bower_components/angular/angular.js"></script>
-
         <!-- build:js scripts/modules.js -->
+        <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
         <script src="bower_components/angular-localstorage/localStorageModule.js"></script>
+        <script src="bower_components/brick/dist/core/core.min.js"></script>
+        <script src="bower_components/brick/dist/tooltip/tooltip.min.js"></script>
+        <script src="bower_components/brick/dist/flipbox/flipbox.min.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/car-compass.js"></script>
+        <script src="scripts/controllers/locate-car.js"></script>
         <!-- endbuild -->
 </body>
 </html>
