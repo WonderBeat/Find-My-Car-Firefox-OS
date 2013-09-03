@@ -3,11 +3,11 @@
         <h1>Find My Car</h1>
     </header>
     <section>
-        <a role="button" href="#/locate/" data-ng-disabled="{{!locationServicesAvailable}}">
+        <button data-ng-disabled="!locationServicesAvailable">
             Save Location
-        </a>
-        <a role="button" href="#/add/" data-ng-disabled="{{!carPosition}}">
+        </button>
+        <button data-ng-disabled="!carPosition">
             Find My Car!
-        </a>
+        </button>
     </section>
 </section>
