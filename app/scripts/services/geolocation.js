@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('findMyCarApp')
-  .service('Geolocation', function Geolocation() {
+  .service('geolocation', function Geolocation() {
 
 		var geo_options = {
 			enableHighAccuracy: true,
