@@ -10,6 +10,7 @@ angular.module('findMyCarApp')
 		};
 
 		return {
-			watch: function(success, error) { return navigator.geolocation.watchPosition(success, error, geo_options); }
+			watch: function(success, error) { return navigator.geolocation.watchPosition(success, error, geo_options); },
+			getCurrent: function(success, error) { return navigator.geolocation.getCurrentPosition(success, error); }
 		}
   });
