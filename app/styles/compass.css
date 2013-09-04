@@ -1,0 +1,15 @@
+.compass {
+    transition-duration: 3s;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    background: url(/images/compass/arrow.png) no-repeat center center;
+    background-size: contain;
+    width: 40%;
+    height: 50%;
+    margin: 30%;
+}
+
+/* rotate class will be used for direction animation*/
+.compass:hover {
+    transform: rotate(100deg);
+}
