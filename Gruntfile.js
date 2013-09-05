@@ -213,7 +213,8 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             'images/{,*/}*.{gif,webp}',
-            'styles/fonts/*'
+            'styles/fonts/*',
+	          'manifest.webapp'
           ]
         }, {
           expand: true,
