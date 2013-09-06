@@ -10,7 +10,8 @@
     "angular-sanitize": "~1.0.7",
     "angular-localstorage": "latest",
     "brick": "latest",
-    "underscore": "~1.5.1"
+    "underscore": "~1.5.1",
+    "openlayers": "~v2.13.1"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

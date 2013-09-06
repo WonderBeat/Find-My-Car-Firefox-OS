@@ -4,15 +4,18 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
+      <!-- build:css(.tmp) styles/main.css -->
     <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/compass.css">
-        <link rel="stylesheet" href="styles/gaia/buttons.css">
-        <link rel="stylesheet" href="styles/gaia/headers.css">
-        <link rel="stylesheet" href="styles/gaia/progress_activity.css">
-        <link rel="stylesheet" href="bower_components/brick/dist/tooltip/tooltip.min.css">
-        <link rel="stylesheet" href="bower_components/brick/dist/flipbox/flipbox.min.css">
-</head>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/compass.css">
+    <link rel="stylesheet" href="styles/gaia/buttons.css">
+    <link rel="stylesheet" href="styles/gaia/util.css">
+    <link rel="stylesheet" href="styles/gaia/headers.css">
+    <link rel="stylesheet" href="styles/gaia/progress_activity.css">
+    <link rel="stylesheet" href="bower_components/brick/dist/tooltip/tooltip.min.css">
+    <link rel="stylesheet" href="bower_components/brick/dist/flipbox/flipbox.min.css">
+      <!-- endbuild -->
+  </head>
   <body data-ng-csp data-ng-app="findMyCarApp">
     <div class="container" data-ng-view=""></div>
 
@@ -28,12 +31,22 @@
         <script src="bower_components/underscore/underscore-min.js"></script>
         <!-- endbuild -->
 
+    <!-- build:js scripts/open-layers.js -->
+        <script src="scripts/open-layers-init.js"></script>
+        <script src="bower_components/openlayers/lib/OpenLayers.js"></script>
+        <script src="bower_components/openlayers/lib/OpenLayers/BaseTypes/Class.js"></script>
+        <script src="bower_components/openlayers/lib/OpenLayers/Util.js"></script>
+        <script src="bower_components/openlayers/lib/OpenLayers/BaseTypes/LonLat.js"></script>
+        <script src="bower_components/openlayers/lib/OpenLayers/Spherical.js"></script>
+    <!-- endbuild -->
+
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/car-compass.js"></script>
         <script src="scripts/controllers/locate-car.js"></script>
         <script src="scripts/services/geolocation.js"></script>
+        <script src="scripts/services/device-orientation.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -1,16 +1,13 @@
 'use strict';
 
 angular.module('findMyCarApp')
-  .service('geolocation', function Geolocation() {
-
-		var geo_options = {
-			enableHighAccuracy: true,
-			maximumAge        : 30000,
-			timeout           : 27000
-		};
-
+	.service('geolocation', [ 'GeolocationConfig', function Geolocation(cfg) {
 		return {
-			watch: function(success, error) { return navigator.geolocation.watchPosition(success, error, geo_options); },
-			getCurrent: function(success, error) { return navigator.geolocation.getCurrentPosition(success, error); }
-		}
-  });
+			watch: function (success, error) {
+				return navigator.geolocation.watchPosition(success, error, cfg);
+			},
+			getCurrent: function (success, error) {
+				return navigator.geolocation.getCurrentPosition(success, error);
+			}
+		};
+	}]);

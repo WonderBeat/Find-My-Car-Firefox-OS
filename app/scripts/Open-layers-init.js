@@ -1,0 +1,3 @@
+window.OpenLayers = {
+	singleFile: true
+};
