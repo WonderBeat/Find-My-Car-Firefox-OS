@@ -1,34 +1,41 @@
 'use strict';
 
 angular.module('findMyCarApp', ['LocalStorageModule'])
-  .config( [
-    '$compileProvider',
-    function( $compileProvider )
-    {
-      /**
-       * An interesting thing about Firefox OS and Angular.
-       * ng-href produces canonical url: http:/yoursite.com/href
-       * In Firefox OS it looks like app://yourappId/href
-       * But Angular prfixes this URL with 'unsafe', because 'app' protocol is unknown.
-       */
-      $compileProvider.urlSanitizationWhitelist(/^\s*(app|https?|ftp|mailto|chrome-extension):/);
-    }
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/locate', {
-        templateUrl: 'views/locate.html',
-        controller: 'LocateCarCtrl'
-      })
-      .when('/compass', {
-        templateUrl: 'views/compass.html',
-        controller: 'CarCompassCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+	.constant('DevOrientationConfig', {
+		throttleRate: 3000 //ms
+	})
+	.constant('GeolocationConfig', {
+		enableHighAccuracy: false,
+		maximumAge: 10000,
+		timeout: 7000
+	})
+	.config([
+		'$compileProvider',
+		function ($compileProvider) {
+			/**
+			 * An interesting thing about Firefox OS and Angular.
+			 * ng-href produces canonical url: http:/yoursite.com/href
+			 * In Firefox OS it looks like app://yourappId/href
+			 * But Angular prfixes this URL with 'unsafe', because 'app' protocol is unknown.
+			 */
+			$compileProvider.urlSanitizationWhitelist(/^\s*(app|https?|ftp|mailto|chrome-extension):/);
+		}
+	])
+	.config(['$routeProvider', function ($routeProvider) {
+		$routeProvider
+			.when('/', {
+				templateUrl: 'views/main.html',
+				controller: 'MainCtrl'
+			})
+			.when('/locate', {
+				templateUrl: 'views/locate.html',
+				controller: 'LocateCarCtrl'
+			})
+			.when('/compass', {
+				templateUrl: 'views/compass.html',
+				controller: 'CarCompassCtrl'
+			})
+			.otherwise({
+				redirectTo: '/'
+			});
+	}]);
