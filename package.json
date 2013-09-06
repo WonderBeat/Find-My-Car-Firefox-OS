@@ -1,6 +1,6 @@
 {
   "name": "find-my-car",
-  "version": "0.0.0",
+  "version": "0.8.0",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -42,6 +42,6 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt"
   }
 }
