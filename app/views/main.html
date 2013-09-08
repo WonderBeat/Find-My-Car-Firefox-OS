@@ -1,11 +1,25 @@
-<section role="region">
+<section role="region" class="main-menu">
     <header>
         <h1>Find My Car</h1>
     </header>
-    <button data-ng-disabled="!locationServicesAvailable">
-        Save Location
-    </button>
-    <button data-ng-disabled="!carPosition">
-        Find My Car!
-    </button>
+    <ul>
+        <li>
+            <button onClick="javascript:location.href = '/#/locate';"
+                    data-ng-disabled="!locationServicesAvailable || !deviceOrientationAvailable">
+                Save Location
+            </button>
+        </li>
+        <li>
+            <button onClick="javascript:location.href = '/#/compass';"
+                    data-ng-disabled="!carPosition || !locationServicesAvailable || !deviceOrientationAvailable">
+                Find My Car!
+            </button>
+        </li>
+    </ul>
+    <x-tooltip orientation="bottom" trigger-style="touchstart" data-ng-show="!locationServicesAvailable">
+        Sorry, your device does not support geolocation.
+    </x-tooltip>
+    <x-tooltip orientation="bottom" trigger-style="touchstart" data-ng-show="!deviceOrientationAvailable">
+        Sorry, your device does not support 'device orientation' feature.
+    </x-tooltip>
 </section>
