@@ -29,8 +29,7 @@ describe('Controller: Locate-Car', function () {
 		var position = {
 			watch: function(callback) {
 				callback({
-					accuracy: 10,
-					coords: { longitude: 200, latitude: 100 }
+					coords: {accuracy: 10, longitude: 200, latitude: 100 }
 				});
 			}
 		};
@@ -48,8 +47,7 @@ describe('Controller: Locate-Car', function () {
 		var position = {
 			watch: function(callback) {
 				callback({
-					accuracy: 10,
-					coords: { longitude: 200, latitude: 100 }
+					coords: {accuracy: 10, longitude: 200, latitude: 100 }
 				});
 			}
 		};
