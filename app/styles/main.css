@@ -19,3 +19,18 @@
     height: 40%;
     margin: 0 0 5%;
 }
+
+.locate h1, .locate h2 {
+    text-align: center;
+}
+
+.locate img {
+    display: block;
+    margin: auto;
+}
+
+.locate button.bottom {
+    margin: 1px;
+    position: absolute;
+    bottom: 0px;
+}
