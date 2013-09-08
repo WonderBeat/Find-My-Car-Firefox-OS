@@ -254,7 +254,7 @@ module.exports = function (grunt) {
       dev: {
         configFile: 'karma.conf.js',
         singleRun: false,
-        watch: true
+        autoWatch: true
       }
     },
     ngmin: {
