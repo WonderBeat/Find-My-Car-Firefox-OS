@@ -7,12 +7,15 @@ angular.module('findMyCarApp').controller('LocateCarCtrl', ['$scope', 'localStor
 		storage.set('car-position', { latitude: pos.coords.latitude, longitude: pos.coords.longitude });
 	};
 
-	var isSuitableAccuracy = function(pos) { return pos.accuracy < cfg.accuracyLimit; };
+	var isSuitableAccuracy = function(pos) { return pos.coords.accuracy < cfg.accuracyLimit; };
 
 	var updateCarPosition = function(pos) {
 		if(!isSuitableAccuracy(pos)) { return; }
 		saveLocation(pos);
-		$scope.positionUpdated = true;
+		$scope.$apply(function() {
+			$scope.positionUpdated = true;
+		});
+
 	};
 
 	geolocation.watch(updateCarPosition);
