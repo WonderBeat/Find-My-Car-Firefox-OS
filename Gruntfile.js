@@ -184,7 +184,7 @@ module.exports = function (grunt) {
     htmlmin: {
 	    dist: {
 		    options: {
-			    removeCommentsFromCDATA: true,
+			    removeCommentsFromCDATA: true
 			    /*removeCommentsFromCDATA: true,
 			     // https://github.com/yeoman/grunt-usemin/issues/44
 			     //collapseWhitespace: true,
@@ -213,7 +213,8 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>',
           src: [
             '*.{ico,png,txt}',
-            'images/{,*/}*.{gif,webp}',
+            'images/{,**/}*.{png,gif,webp}',
+	          'icons/{,*/}*.{png,webp}',
             'styles/fonts/*',
 	          'manifest.webapp'
           ]
@@ -242,8 +243,8 @@ module.exports = function (grunt) {
       ],
       dist: [
         'copy:styles',
-        'imagemin',
-        'svgmin',
+      //  'imagemin', -->> no need to compress images
+      //  'svgmin',
         'htmlmin'
       ]
     },
