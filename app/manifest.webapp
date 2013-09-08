@@ -5,7 +5,7 @@
         "name": "Denis Golovachev",
         "url": "http://borov.net"
     },
-    "description": "Find My Car",
+    "description": "Tired of searching where you have parked your car? This app can help you.",
     "launch_path": "/index.html",
     "icons":{
         "128": "/icons/icon128.png",
@@ -15,7 +15,7 @@
     "locales": {
         "en-US": {
           "name": "Find My Car",
-          "description": "Find My Car"
+          "description": "Tired of searching where you have parked your car? This app can help you."
         }
       },
     "default_locale": "en-US"
