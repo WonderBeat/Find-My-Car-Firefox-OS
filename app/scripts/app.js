@@ -10,7 +10,7 @@ angular.module('findMyCarApp', ['LocalStorageModule'])
 		timeout: 7000
 	})
 	.constant('locateCarConfig', {
-		accuracyLimit: 10 // meters
+		accuracyLimit: 25 // meters
 	})
 	.config([
 		'$compileProvider',
