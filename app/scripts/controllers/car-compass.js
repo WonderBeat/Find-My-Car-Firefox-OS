@@ -1,6 +1,9 @@
 'use strict';
 
-angular.module('findMyCarApp').controller('CarCompassCtrl', [ '$scope', 'geolocation', 'deviceOrientation', function ($scope, geolocation, deviceOrientation) {
+angular.module('findMyCarApp').controller('CarCompassCtrl', [ '$scope', 'geolocation', 'deviceOrientation', 'localStorageService', function ($scope, geolocation, deviceOrientation, storage) {
+
+	$scope.northBasedDirection = 0;
+
 	var updateDirection = function (degree) {
 		$scope.direction = {
 			'transform': 'rotate(' + degree + 'deg)',
@@ -9,23 +12,21 @@ angular.module('findMyCarApp').controller('CarCompassCtrl', [ '$scope', 'geoloca
 		};
 	};
 
-	$scope.northBasedDirection = 0;
-
 	var updatePosition = function (position) {
-		var epam = new OpenLayers.LonLat(59.913035, 30.348139);
+		var carPosition = storage.get('car-position');
+		var destination = new OpenLayers.LonLat(carPosition.longitude, carPosition.latitude);
 		var current = new OpenLayers.LonLat(position.coords.longitude, position.coords.latitude);
-		$scope.northBasedDirection = (360 + OpenLayers.Spherical.computeHeading(current, epam) - position.coords.heading) % 360;
+		$scope.northBasedDirection = OpenLayers.Spherical.computeHeading(current, destination);
 	};
 
 	var updatePositionDirection = function (orientation) {
 		$scope.$apply(function () {
 			$scope.orientation = orientation.alpha;
-			$scope.degree = $scope.northBasedDirection - orientation.alpha;
-			updateDirection($scope.degree);
+			$scope.angle = 360 - $scope.northBasedDirection -  orientation.alpha; // based on Firefox API implementation
+			updateDirection($scope.angle);
 		});
 	};
 
-	deviceOrientation.watch(updatePositionDirection);
-
 	geolocation.watch(updatePosition);
+	deviceOrientation.watch(updatePositionDirection);
 }]);
