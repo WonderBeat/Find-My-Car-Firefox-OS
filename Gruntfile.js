@@ -138,7 +138,7 @@ module.exports = function (grunt) {
       }
     },
     useminPrepare: {
-      html: '<%= yeoman.app %>/index.html',
+      html: ['<%= yeoman.app %>/index.html'],
       options: {
         dest: '<%= yeoman.dist %>'
       }
@@ -147,7 +147,8 @@ module.exports = function (grunt) {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
-        dirs: ['<%= yeoman.dist %>']
+        dirs: ['<%= yeoman.dist %>'],
+	      basedir: '<%= yeoman.dist %>'
       }
     },
     imagemin: {
@@ -183,7 +184,7 @@ module.exports = function (grunt) {
     htmlmin: {
 	    dist: {
 		    options: {
-			    removeCommentsFromCDATA: true
+			    removeCommentsFromCDATA: true,
 			    /*removeCommentsFromCDATA: true,
 			     // https://github.com/yeoman/grunt-usemin/issues/44
 			     //collapseWhitespace: true,
@@ -197,7 +198,7 @@ module.exports = function (grunt) {
 		    files: [{
 			    expand: true,
 			    cwd: '<%= yeoman.app %>',
-			    src: ['*.html', 'views/*.html'],
+			    src: ['*.html', 'views/{,*/}*.html'],
 			    dest: '<%= yeoman.dist %>'
 		    }]
 	    }
