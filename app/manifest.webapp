@@ -18,5 +18,10 @@
           "description": "Tired of searching where you have parked your car? This app can help you."
         }
       },
+    "permissions": {
+      "geolocation": {
+        "description": "Required for car locator"
+      }
+    }
     "default_locale": "en-US"
 }
