@@ -1,4 +1,4 @@
-.compass {
+.compass.arrow {
     transition-duration: 3s;
     transition-property: transform;
     transition-timing-function: ease-in-out;
@@ -9,7 +9,8 @@
     margin: 30%;
 }
 
-/* rotate class will be used for direction animation*/
-.compass:hover {
-    transform: rotate(100deg);
+.compass button.bottom, {
+    margin: 1px;
+    position: absolute;
+    bottom: 0px;
 }
