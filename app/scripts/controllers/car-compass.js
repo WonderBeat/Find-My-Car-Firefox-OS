@@ -29,6 +29,11 @@ angular.module('findMyCarApp').controller('CarCompassCtrl', [ '$scope', 'geoloca
 		});
 	};
 
+	$scope.$on('$destroy', function() {
+		deviceOrientation.removeListener(updatePositionDirection);
+		geolocation.removeListener(updatePosition);
+	});
+
 	geolocation.watch(updatePosition);
 	deviceOrientation.watch(updatePositionDirection);
 }]);

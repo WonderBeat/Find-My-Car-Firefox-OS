@@ -5,6 +5,9 @@ angular.module('findMyCarApp')
 		return {
 			watch: function (callback) {
 				window.addEventListener('deviceorientation', _.throttle(callback, cfg.throttleRate, {trailing: false}), true);
-			}
+			},
+			removeListener: function(listener) {
+					window.removeEventListener('deviceorientation', listener);
+			  }
 		};
 	}]);

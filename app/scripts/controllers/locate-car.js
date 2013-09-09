@@ -15,10 +15,12 @@ angular.module('findMyCarApp').controller('LocateCarCtrl', ['$scope', 'localStor
 		$scope.$apply(function() {
 			$scope.positionUpdated = true;
 		});
-
 	};
 
-	geolocation.watch(updateCarPosition);
+	$scope.$on('$destroy', function() {
+		geolocation.removeListener(updateCarPosition);
+	});
 
+	geolocation.watch(updateCarPosition);
 
 }]);
