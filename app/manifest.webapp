@@ -22,6 +22,6 @@
       "geolocation": {
         "description": "Required for car locator"
       }
-    }
+    },
     "default_locale": "en-US"
 }
