@@ -253,6 +253,10 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       },
+	    e2e: {
+		    configFile: 'karma-e2e.conf.js',
+		    singleRun: true
+	    },
       dev: {
         configFile: 'karma.conf.js',
         singleRun: false,
@@ -303,6 +307,16 @@ module.exports = function (grunt) {
     'karma:unit'
   ]);
 
+	grunt.registerTask('test:e2e', function () {
+		grunt.task.run([
+			'clean:server',
+			'concurrent:server',
+			'connect:livereload',
+			'open',
+			'karma:e2e'
+		]);
+	});
+
   grunt.registerTask('build', [
     'clean:dist',
     'useminPrepare',
@@ -320,6 +334,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'jshint',
     'test',
+	  'karma:e2e',
     'build'
   ]);
 };
