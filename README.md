@@ -4,6 +4,14 @@ Find-My-Car-Firefox-OS
 "Find My Car" - application, that can help you to find your car!  
 Contributors are Welcome!
 
+#Application is in Firefox market!
+https://marketplace.firefox.com/app/find-my-car/
+
+#Screenshots
+[![screenshot-1]()](http)
+[![Build Status](https://raw.github.com/WonderBeat/Find-My-Car-Firefox-OS/master/screenshot-1.png)](https://marketplace.firefox.com/app/find-my-car/)
+[![Build Status](https://raw.github.com/WonderBeat/Find-My-Car-Firefox-OS/master/screenshot-2.png)](https://marketplace.firefox.com/app/find-my-car/)
+
 ##CI Status
 [![Build Status](https://travis-ci.org/WonderBeat/Find-My-Car-Firefox-OS.png)](https://travis-ci.org/WonderBeat/Find-My-Car-Firefox-OS)
 
