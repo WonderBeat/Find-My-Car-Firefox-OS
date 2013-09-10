@@ -312,6 +312,7 @@ module.exports = function (grunt) {
 			'clean:server',
 			'concurrent:server',
 			'open',
+			'connect:livereload',
 			'karma:e2e'
 		]);
 	});
@@ -333,7 +334,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'jshint',
     'test',
-	  'test:e2e',
     'build'
   ]);
 };
