@@ -1,4 +1,4 @@
-.compass.arrow {
+.compass .arrow {
     transition-duration: 3s;
     transition-property: transform;
     transition-timing-function: ease-in-out;
@@ -12,5 +12,5 @@
 .compass button.bottom {
     margin: 1px;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
 }
