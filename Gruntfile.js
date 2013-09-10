@@ -334,7 +334,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'jshint',
     'test',
-	  'karma:e2e',
+	  'test:e2e',
     'build'
   ]);
 };
