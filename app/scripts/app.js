@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('findMyCarApp', ['LocalStorageModule'])
+angular.module('findMyCarApp', ['LocalStorageModule', 'ngRoute'])
 	.constant('DevOrientationConfig', {
 		throttleRate: 3000 //ms
 	})
@@ -21,7 +21,7 @@ angular.module('findMyCarApp', ['LocalStorageModule'])
 			 * In Firefox OS it looks like app://yourappId/href
 			 * But Angular prfixes this URL with 'unsafe', because 'app' protocol is unknown.
 			 */
-			$compileProvider.urlSanitizationWhitelist(/^\s*(app|https?|ftp|mailto|chrome-extension):/);
+			$compileProvider.aHrefSanitizationWhitelist(/^\s*(app|https?|ftp|mailto|chrome-extension):/);
 		}
 	])
 	.config(['$routeProvider', function ($routeProvider) {
