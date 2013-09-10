@@ -9,7 +9,7 @@
     margin: 30%;
 }
 
-.compass button.bottom, {
+.compass button.bottom {
     margin: 1px;
     position: absolute;
     bottom: 0px;
