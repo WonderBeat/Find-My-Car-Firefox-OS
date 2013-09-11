@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('findMyCarApp', ['LocalStorageModule', 'ngRoute'])
+angular.module('findMyCarApp', ['LocalStorageModule', 'ngRoute', 'ngAnimate'])
 	.constant('DevOrientationConfig', {
 		throttleRate: 3000 //ms
 	})

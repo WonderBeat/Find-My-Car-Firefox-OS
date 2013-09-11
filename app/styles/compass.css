@@ -2,7 +2,7 @@
     transition-duration: 3s;
     transition-property: transform;
     transition-timing-function: ease-in-out;
-    background: url(/images/compass/arrow.png) no-repeat center center;
+    background: url(/images/arrow.png) no-repeat center center;
     background-size: contain;
     width: 40%;
     height: 50%;

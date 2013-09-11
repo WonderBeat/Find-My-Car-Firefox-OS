@@ -1,4 +1,4 @@
-<section role="region" class="locate">
+<section role="region" class="screen locate">
     <header>
         <a href="#/"><span class="icon icon-back">back</span></a>
         <h1>Please Wait...</h1>
@@ -6,12 +6,12 @@
     <div data-ng-show="!positionUpdated">
         <h1>Looking for your location...</h1>
         <img class="spinner" src="images/progress_activity/ui/default@1.5x.png"/>
-        <button class="bottom" onClick="javascript:location.href = '#/';">Back</button>
+        <button class="bottom" onClick="location.href = '#/';">Back</button>
     </div>
     <div data-ng-show="positionUpdated">
         <h1>Location saved!</h1>
         <h2>You can close Application now</h2>
-        <button class="bottom" onClick="javascript:location.href = '#/';">Done</button>
+        <button class="bottom" onClick="location.href = '#/';">Done</button>
     </div>
 
 </section>
