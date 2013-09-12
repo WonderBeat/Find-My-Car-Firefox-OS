@@ -31,8 +31,8 @@ grunt karma:dev
 ```
 
 ##Project Goals
-- Get acquainted with HTML5 geolocation API and Firefox OS Marketplace
-- Configure Travis CI for Grunt project (Done).
+- Get acquainted with HTML5 geolocation API and Firefox OS Marketplace. (Done)
+- Configure Travis CI for Grunt project. (Done)
 - Check idea, that "IPhone app clones can be saled in Firefox Marketplace"
 - Collaborate!!!
 
