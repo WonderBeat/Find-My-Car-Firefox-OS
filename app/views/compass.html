@@ -1,9 +1,19 @@
 <section role="region" class="screen compass">
     <header>
         <a href="#/"><span class="icon icon-back">back</span></a>
+        <menu type="toolbar">
+            <button data-ng-click="showInfo = !showInfo">Info</button>
+        </menu>
         <h1>Compass</h1>
     </header>
     <div data-ng-style="direction" class="arrow">
     </div>
-    <button class="bottom" onClick="javascript:location.href = '#/';">Back</button>
+    <div class="bottom">
+        <div data-ng-show="showInfo">
+            <p class="mini">Position: Lat: {{ coords.latitude }}, Long: {{ coords.longitude }}</p>
+            <p class="mini">Car Position: Lat: {{ carPosition.latitude }}, Long: {{ carPosition.longitude }}</p>
+            <p class="mini">Accuracy: {{ coords.accuracy }} meters</p>
+        </div>
+        <button onClick="location.href = '#/';">Back</button>
+    </div>
 </section>

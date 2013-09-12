@@ -5,8 +5,8 @@ angular.module('findMyCarApp', ['LocalStorageModule', 'ngRoute', 'ngAnimate'])
 		throttleRate: 3000 //ms
 	})
 	.constant('GeolocationConfig', {
-		enableHighAccuracy: false,
-		maximumAge: 10000, // ms
+		enableHighAccuracy: true,
+		maximumAge: 0, // ms
 		timeout: 7000
 	})
 	.constant('locateCarConfig', {

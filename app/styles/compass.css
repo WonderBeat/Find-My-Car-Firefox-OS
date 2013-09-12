@@ -9,8 +9,12 @@
     margin: 30%;
 }
 
-.compass button.bottom {
-    margin: 1px;
+.compass .bottom {
+    width: 100%;
     position: absolute;
     bottom: 0;
+}
+
+.compass .bottom > button {
+    margin: 1px 1px 0;
 }

@@ -3,6 +3,7 @@
 angular.module('findMyCarApp').controller('CarCompassCtrl', [ '$scope', 'geolocation', 'deviceOrientation', 'localStorageService', function ($scope, geolocation, deviceOrientation, storage) {
 
 	$scope.northBasedDirection = 0;
+	$scope.showInfo = false;
 
 	var updateDirection = function (degree) {
 		$scope.direction = {
@@ -13,8 +14,9 @@ angular.module('findMyCarApp').controller('CarCompassCtrl', [ '$scope', 'geoloca
 	};
 
 	var updatePosition = function (position) {
-		var carPosition = storage.get('car-position');
-		var destination = new OpenLayers.LonLat(carPosition.longitude, carPosition.latitude);
+		$scope.coords = position.coords;
+		$scope.carPosition = storage.get('car-position');
+		var destination = new OpenLayers.LonLat($scope.carPosition.longitude, $scope.carPosition.latitude);
 		var current = new OpenLayers.LonLat(position.coords.longitude, position.coords.latitude);
 		$scope.northBasedDirection = OpenLayers.Spherical.computeHeading(current, destination);
 	};
