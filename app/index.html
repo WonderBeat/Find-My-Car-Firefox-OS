@@ -17,10 +17,10 @@
       <!-- endbuild -->
   </head>
   <body data-ng-csp data-ng-app="findMyCarApp">
-    <div class="parallax">
-        <img src="images/parallax_routes.png" alt="routes"/>
-        <img src="images/parallax_goals.png" alt="goals"/>
-    </div>
+    <ul class="parallax" id="scene">
+        <li  class="layer" data-depth="0.00"><img src="images/parallax_scene.png" alt="routes"/></li>
+        <li  class="layer" data-depth="1.00"><img src="images/parallax_objects.png" alt="goals"/></li>
+    </ul>
 
 
     <div class="container" data-ng-view=""></div>
@@ -37,6 +37,7 @@
         <script src="bower_components/brick/dist/tooltip/tooltip.min.js"></script>
         <script src="bower_components/brick/dist/flipbox/flipbox.min.js"></script>
         <script src="bower_components/underscore/underscore-min.js"></script>
+        <script src="bower_components/parallax/deploy/parallax.min.js"></script>
         <!-- endbuild -->
 
     <!-- build:js scripts/open-layers.js -->
@@ -55,6 +56,7 @@
         <script src="scripts/controllers/locate-car.js"></script>
         <script src="scripts/services/geolocation.js"></script>
         <script src="scripts/services/device-orientation.js"></script>
+        <script src="scripts/parallax-init.js"></script>
         <!-- endbuild -->
 </body>
 </html>

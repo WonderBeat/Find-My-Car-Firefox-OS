@@ -13,7 +13,8 @@
     "underscore": "~1.5.1",
     "openlayers": "~v2.13.1",
     "angular-route": "v1.2.0-rc.2",
-    "angular-animate": "v1.2.0-rc.2"
+    "angular-animate": "v1.2.0-rc.2",
+    "parallax": "latest"
   },
   "devDependencies": {
     "angular-scenario": "~1.0.7",

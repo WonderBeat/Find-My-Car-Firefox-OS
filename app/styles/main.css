@@ -10,9 +10,8 @@ body {
     font-weight: bold;
 }
 
-.parallax, .parallax img {
+.parallax {
     position: absolute;
-    width: 100%;
 }
 
 .main-menu button {
