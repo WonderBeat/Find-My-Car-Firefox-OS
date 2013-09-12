@@ -13,7 +13,12 @@ body {
 .parallax {
     position: absolute;
     z-index: -1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
+
+
 
 .main-menu button {
     opacity: 0.6;
@@ -65,10 +70,14 @@ body {
     }
 }
 
-.locate button.bottom {
-    margin: 1px;
+.locate div.bottom {
+    width: 100%;
     position: absolute;
     bottom: 0;
+}
+
+.locate .bottom > button {
+    margin: 1px 1px 0;
 }
 
 .container {

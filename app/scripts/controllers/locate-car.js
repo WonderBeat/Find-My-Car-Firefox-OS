@@ -2,6 +2,8 @@
 
 angular.module('findMyCarApp').controller('LocateCarCtrl', ['$scope', 'localStorageService', 'geolocation', 'locateCarConfig', function ($scope, storage, geolocation, cfg) {
 	$scope.carPosition = storage.get('car-position');
+	$scope.showInfo = false;
+	$scope.targetAccuracy = cfg.accuracyLimit;
 
 	var saveLocation = function(pos) {
 		storage.set('car-position', { latitude: pos.coords.latitude, longitude: pos.coords.longitude });
@@ -17,10 +19,18 @@ angular.module('findMyCarApp').controller('LocateCarCtrl', ['$scope', 'localStor
 		});
 	};
 
+	var updateCurrentAccuracy = function(pos) {
+		$scope.$apply(function() {
+			$scope.accuracy = pos.coords.accuracy;
+		});
+	};
+	
 	$scope.$on('$destroy', function() {
 		geolocation.removeListener(updateCarPosition);
+		geolocation.removeListener(updateCurrentAccuracy);
 	});
 
 	geolocation.watch(updateCarPosition);
+	geolocation.watch(updateCurrentAccuracy);
 
 }]);
