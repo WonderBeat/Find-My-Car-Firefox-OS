@@ -5,7 +5,7 @@
         "name": "Denis Golovachev",
         "url": "http://borov.net"
     },
-    "description": "Tired of searching where you have parked your car? This app can help you.",
+    "description": "Tired of searching where you have parked your car? This app can help you. Also great for remembering the location of your hotel, camping spot, trail head, boat ramp, bus stop or any other location you would like to easily return to later.",
     "launch_path": "/index.html",
     "icons":{
         "128": "/icons/icon128.png",
@@ -15,7 +15,7 @@
     "locales": {
         "en-US": {
           "name": "Find My Car",
-          "description": "Tired of searching where you have parked your car? This app can help you."
+          "description": "Tired of searching where you have parked your car? This app can help you. Also great for remembering the location of your hotel, camping spot, trail head, boat ramp, bus stop or any other location you would like to easily return to later."
         }
       },
     "permissions": {
