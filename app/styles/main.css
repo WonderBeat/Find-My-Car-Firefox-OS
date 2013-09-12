@@ -12,6 +12,7 @@ body {
 
 .parallax {
     position: absolute;
+    z-index: -1;
 }
 
 .main-menu button {
