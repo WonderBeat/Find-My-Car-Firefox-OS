@@ -20,7 +20,6 @@
     <div data-ng-show="positionUpdated">
         <h1>Location saved!</h1>
         <h2>You can close Application now</h2>
-        <button class="bottom" onClick="location.href = '#/';">Done</button>
     </div>
-
+    <button data-ng-show="positionUpdated" class="bottom" onClick="location.href = '#/';">Done</button>
 </section>
