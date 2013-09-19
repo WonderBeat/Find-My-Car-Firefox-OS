@@ -7,6 +7,10 @@ Contributors are Welcome!
 #Application is in Firefox market!
 https://marketplace.firefox.com/app/find-my-car/
 
+##Hey! Paid version is here too.
+### Maps included
+https://marketplace.firefox.com/app/find-my-car-1/
+
 #Screenshots
 [![App screenshot](https://raw.github.com/WonderBeat/Find-My-Car-Firefox-OS/master/screenshot-1.png)](https://marketplace.firefox.com/app/find-my-car/)
 [![App screenshot](https://raw.github.com/WonderBeat/Find-My-Car-Firefox-OS/master/screenshot-2.png)](https://marketplace.firefox.com/app/find-my-car/)
@@ -33,6 +37,6 @@ grunt karma:dev
 ##Project Goals
 - Get acquainted with HTML5 geolocation API and Firefox OS Marketplace. (Done)
 - Configure Travis CI for Grunt project. (Done)
-- Check idea, that "IPhone app clones can be saled in Firefox Marketplace"
-- Collaborate!!!
+- Check idea, that "IPhone app clones can be saled in Firefox Marketplace" (Done, gathering stats)
+- Collaborate!!! (In progress)
 
