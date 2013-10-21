@@ -1,5 +1,5 @@
 body {
-    background: url(/images/map.jpg) no-repeat center;
+    background: url(/images/map.png) repeat;
 }
 
 .container {
@@ -13,12 +13,16 @@ body {
 .parallax {
     position: absolute;
     z-index: -1;
-    height: 100%;
     width: 100%;
-    overflow: hidden;
+    height: 100%;
 }
 
-
+.parallax li img {
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+}
 
 .main-menu button {
     opacity: 0.6;
