@@ -20,11 +20,11 @@ angular.module('findMyCarApp', ['LocalStorageModule', 'ngRoute', 'ngAnimate'])
 	})
 	.constant('GeolocationConfig', {
 		enableHighAccuracy: true,
-		maximumAge: 4000, // ms
-		timeout: 10000
+		maximumAge: 10000, // ms
+		timeout: 40000
 	})
 	.constant('locateCarConfig', {
-		accuracyLimit: 25 // meters
+		accuracyLimit: 35 // meters
 	})
 	.config([
 		'$compileProvider',

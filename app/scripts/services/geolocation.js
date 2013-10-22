@@ -28,7 +28,9 @@ angular.module('findMyCarApp')
 		return {
 			watch: function (callback) {
 				if(!watchId) {
-					watchId = navigator.geolocation.watchPosition(fireAllCallbacks, function() {}, cfg);
+					watchId = navigator.geolocation.watchPosition(fireAllCallbacks, function(reason) {
+						console.warn('Position update failed', reason);
+					}, cfg);
 				}
 				callbacks.push(callback);
 			},

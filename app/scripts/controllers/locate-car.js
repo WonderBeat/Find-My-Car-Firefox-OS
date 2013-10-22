@@ -18,6 +18,7 @@ angular.module('findMyCarApp').controller('LocateCarCtrl', ['$scope', 'localStor
 	$scope.carPosition = storage.get('car-position');
 	$scope.showInfo = false;
 	$scope.targetAccuracy = cfg.accuracyLimit;
+	$scope.accuracy = '∞';
 
 	var saveLocation = function(pos) {
 		storage.set('car-position', { latitude: pos.coords.latitude, longitude: pos.coords.longitude });

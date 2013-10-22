@@ -8,11 +8,12 @@
     </header>
     <div data-ng-show="!positionUpdated">
         <h1>Looking for your location...</h1>
-        <img class="spinner" src="images/progress_activity/ui/default@1.5x.png"/>
+        <img class="spinner" src="images/progress_activity/ui/default@1.5x.png">
         <div class="bottom">
             <div data-ng-show="showInfo">
                 <p class="mini">GPS accuracy: {{ accuracy }} meters</p>
                 <p class="mini">Accuracy should be lower than: {{ targetAccuracy }} meters</p>
+                <p class="mini">Current Firefox OS GPS needs several minutes to retrieve coordinates</p>
             </div>
             <button class="bottom" onClick="location.href = '#/';">Back</button>
         </div>

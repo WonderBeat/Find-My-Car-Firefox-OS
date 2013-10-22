@@ -125,18 +125,6 @@ module.exports = function (grunt) {
     /*concat: {
       dist: {}
     },*/
-    rev: {
-      dist: {
-        files: {
-          src: [
-            '<%= yeoman.dist %>/scripts/{,*/}*.js',
-            '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.dist %>/styles/fonts/*'
-          ]
-        }
-      }
-    },
     useminPrepare: {
       html: ['<%= yeoman.app %>/index.html'],
       options: {
@@ -274,6 +262,11 @@ module.exports = function (grunt) {
       }
     },
     uglify: {
+//	    options: {
+//		    mangle: false,
+//		    beautify: true,
+//		    preserveComments: true
+//	    },
       dist: {
         files: {
           '<%= yeoman.dist %>/scripts/scripts.js': [
@@ -327,7 +320,6 @@ module.exports = function (grunt) {
 	  'copy:dist',
     'ngmin',
     'uglify',
-    'rev',
     'usemin'
   ]);
 
