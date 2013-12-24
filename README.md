@@ -40,3 +40,7 @@ grunt karma:dev
 - Check idea, that "IPhone app clones can be saled in Firefox Marketplace" (Done. [Blogpost](http://post-engineering.com/tech/2013/09/20/firefox-os-first-app-sold/))
 - Collaborate!!! (In progress)
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/WonderBeat/find-my-car-firefox-os/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
