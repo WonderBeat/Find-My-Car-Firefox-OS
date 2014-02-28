@@ -1,6 +1,6 @@
 <section role="region" class="screen main-menu">
     <header>
-        <h1>Find My Car</h1>
+        <h1>Find My Car Lite</h1>
     </header>
     <ul>
         <li>
@@ -14,12 +14,12 @@
                     data-ng-disabled="!carPosition || !locationServicesAvailable || !deviceOrientationAvailable">
                 Find My Car!
             </button>
+            <p data-ng-show="!locationServicesAvailable">
+                Sorry, your device does not support geolocation.
+            </p>
+            <p data-ng-show="!deviceOrientationAvailable">
+                Sorry, your device does not support 'device orientation' feature.
+            </p>
         </li>
     </ul>
-    <x-tooltip orientation="bottom" trigger-style="touchstart" data-ng-show="!locationServicesAvailable">
-        Sorry, your device does not support geolocation.
-    </x-tooltip>
-    <x-tooltip orientation="bottom" trigger-style="touchstart" data-ng-show="!deviceOrientationAvailable">
-        Sorry, your device does not support 'device orientation' feature.
-    </x-tooltip>
 </section>

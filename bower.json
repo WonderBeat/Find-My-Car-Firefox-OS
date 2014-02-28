@@ -9,7 +9,6 @@
     "angular-cookies": "1.2.13",
     "angular-sanitize": "1.2.13",
     "angular-local-storage": "0.0.1",
-    "brick": "latest",
     "underscore": "~1.5.1",
     "openlayers": "~v2.13.1",
     "angular-route": "v1.2.13",
