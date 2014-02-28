@@ -1,23 +1,23 @@
 {
   "name": "findMyCar",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "dependencies": {
-    "angular": "v1.2.0-rc.2",
+    "angular": "1.2.13",
     "json3": "~3.2.4",
     "es5-shim": "~2.0.8",
-    "angular-resource": "~1.0.7",
-    "angular-cookies": "~1.0.7",
-    "angular-sanitize": "~1.0.7",
-    "angular-localstorage": "latest",
+    "angular-resource": "1.2.13",
+    "angular-cookies": "1.2.13",
+    "angular-sanitize": "1.2.13",
+    "angular-local-storage": "0.0.1",
     "brick": "latest",
     "underscore": "~1.5.1",
     "openlayers": "~v2.13.1",
-    "angular-route": "v1.2.0-rc.2",
-    "angular-animate": "v1.2.0-rc.2",
+    "angular-route": "v1.2.13",
+    "angular-animate": "v1.2.13",
     "parallax": "latest"
   },
   "devDependencies": {
-    "angular-scenario": "~1.0.7",
-    "angular-mocks": "v1.2.0-rc.2"
+    "angular-scenario": "=v1.2.13",
+    "angular-mocks": "1.2.13"
   }
 }

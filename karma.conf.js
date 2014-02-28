@@ -23,7 +23,7 @@ module.exports = function(config) {
 	    'app/bower_components/angular-route/angular-route.js',
 	    'app/bower_components/angular-animate/angular-animate.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
-	    'app/bower_components/angular-localstorage/angular-local-storage.js',
+	    'app/bower_components/angular-local-storage/angular-local-storage.js',
 	    'app/bower_components/underscore/underscore-min.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
